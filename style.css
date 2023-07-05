@@ -1,0 +1,214 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: #D9D9D9;
+}
+
+nav{
+    background-color: #879F84;
+}
+
+#nav ul{
+    position: relative;
+    list-style:none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    bottom: 60px;
+}
+
+#nav li{
+    display: inline-block;
+}
+
+#nav a{
+    width:100px;
+    display:block;
+    padding:17px 20px;
+    text-transform:uppercase;
+    font-weight:bold;
+    color: black;
+    text-align: center;
+}
+
+#nav img{
+    margin-left: 8rem;
+    margin-top: 3rem;
+   
+}
+
+#nav h1{
+  display: inline;
+  margin-left: 8px;
+  font-size: 50px;
+  color:#D28957;
+  text-shadow: 2px 2px 4px black;
+}
+
+
+#firstdiv{
+    background-color: black;
+    height:2px;
+    width:100%;
+}
+
+#imgdiv{
+    background-image:url("./images/kike-vega-F2qh3yjz6Jk-unsplash.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    width:100%;
+    height:40rem;
+}
+
+#thirddiv{
+    width:40%;
+    height:23rem;
+    background-color: #879F84;
+    position: relative;
+    left:35rem;
+    bottom:8rem;
+}
+
+#thirddiv h2{
+    font-weight:lighter !important;
+    color:white;
+    padding: 30px;
+    font-size: 50px;
+   font-family: 'Roboto', sans-serif;
+}
+
+
+#description h2{
+    color:#D28957;
+    font-family:'Great Vibes', cursive ;
+    font-size: 70px;
+    text-align: center;
+}
+
+#description p{
+    color: #D28957;
+    text-align: center;
+    margin-left: 35rem;
+    width:40%;
+    font-size:32px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.imgabout img{
+    width:40%;
+    margin-top: 10rem;
+    margin-left:5rem;
+    border-radius:50px 50px 50px 50px ;
+}
+
+.imgabout p{
+    color:#879F84;
+    font-family: 'Roboto', sans-serif;
+    font-size: 37px;
+    float:right;
+    width:40%;
+    margin-right: 16rem;
+    margin-top: 15rem;
+}
+
+.imgabout button{
+    position:relative;
+    background-color: #D28957;
+    width:10%;
+    height:3rem;
+    left:68rem;
+    bottom:12rem;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+#imgabout2 img{
+    width:40%;
+    float:right;
+    margin-right:4rem;
+    border-radius:50px 50px 50px 50px ;
+    margin-top:100px;   
+}
+
+#imgabout2 p{
+    color:#879F84;
+    font-family: 'Roboto', sans-serif;
+    font-size: 37px;
+    width:30%;
+    float: left;
+    margin-top:16rem;
+    margin-left:19rem;
+}
+
+#imgabout2 button{
+    background-color: #D28957;
+    width:10%;
+    height:3rem;
+    position: relative;
+    bottom:12rem;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px; 
+    top:25rem;  
+    right:26rem;
+}
+
+#imgabout3 img{
+    padding-top: 10rem;
+    width:40%;
+    margin-top: 4rem;
+    margin-left:5rem;
+    border-radius:90px 50px 50px 50px ;
+}
+
+#imgabout3 p{
+    color:#879F84;
+    font-family: 'Roboto', sans-serif;
+    font-size: 37px;
+    position:relative;
+    width:40%;
+    left: 55rem;
+    top:33rem;
+}
+
+#imgabout3 button{
+    background-color: #D28957;
+    position: relative;
+    width:10%;
+    height:3rem;
+    left:14rem;
+    bottom:12rem;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+#final{
+    color:#879F84;
+    text-align: center;
+    width:45%;
+    margin-left:35rem;
+    margin-top: 12rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter !important;
+    font-size: 40px;
+}
+
+#updatesdiv{
+    background-color: #D28957;
+    margin-top:7rem;
+}
+
+#updatesdiv h2{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter !important;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#updatesdiv 
