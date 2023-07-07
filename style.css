@@ -5,6 +5,7 @@ body{
     overflow-x: hidden;
 }
 
+/* nav bar */
 nav{
     background-color: #059Dc0;
 }
@@ -46,13 +47,6 @@ nav{
   text-shadow: 2px 2px 4px black;
 }
 
-
-#firstdiv{
-    background-color: black;
-    height:2px;
-    width:100%;
-}
-
 #imgdiv{
     background-image:url("./images/kike-vega-F2qh3yjz6Jk-unsplash.jpg");
     background-attachment: fixed;
@@ -61,32 +55,30 @@ nav{
     background-position:center;
     width:100%;
     height:40rem;
-}
-
-#thirddiv{
-    width:40%;
-    height:23rem;
-    background-color: #059Dc0;
-    position: relative;
-    left:35rem;
-    bottom:8rem;
+    position:sticky;
 }
 
 #thirddiv h2{
     font-weight:lighter !important;
+    background-color: #059Dc0;
     color:white;
     padding: 30px;
     font-size: 50px;
-   font-family: 'Roboto', sans-serif;
+    width:40%;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 35rem;
+    position: relative;
+    top:-10rem;
 }
-
 
 #description h2{
     color:#D28957;
     font-family:'Great Vibes', cursive ;
     font-size: 70px;
-    text-align: center;
+    width:30%;
+    margin-left:44rem;
 }
+
 
 #description p{
     color: #059Dc0;
@@ -97,97 +89,63 @@ nav{
     font-family: 'Roboto', sans-serif;
 }
 
+
+/* detail div element */
+.imgabout{
+    display:flex;
+    font-size: 30px;
+}
 .imgabout img{
     width:40%;
-    margin-top: 10rem;
+    margin-top: 17rem;
     margin-left:5rem;
     border-radius:50px 50px 50px 50px ;
 }
 
 .imgabout p{
     color:#059Dc0;
+    margin-left: 10rem;
     font-family: 'Roboto', sans-serif;
-    font-size: 37px;
-    float:right;
-    width:40%;
-    margin-right: 16rem;
-    margin-top: 15rem;
+    width:30%;
+    margin-top:23rem;
+    height:15rem;
 }
 
 .imgabout button{
-    position:relative;
+    height: 3rem;
+    width:8%;
+    margin-top:42rem;
+    margin-right: 19rem;
     background-color: #D28957;
-    width:10%;
-    height:3rem;
-    left:68rem;
-    bottom:12rem;
-    color:white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
 }
 
-#imgabout2 img{
-    width:40%;
-    float:right;
-    margin-right:4rem;
-    border-radius:50px 50px 50px 50px ;
-    margin-top:100px;   
+.imgabout2{
+    display: flex;
+    margin-top:13rem;
+    margin-left:30rem;
+    font-size: 30px;
+}
+.imgabout2 img{
+    width:50%;
+    border-radius:50px 50px 50px 50px ;  
 }
 
-#imgabout2 p{
+.imgabout2 p{
     color:#059Dc0;
     font-family: 'Roboto', sans-serif;
-    font-size: 37px;
+    margin-top: 10%;
     width:30%;
-    float: left;
-    margin-top:16rem;
-    margin-left:19rem;
+    height: 10rem;
 }
 
-#imgabout2 button{
-    background-color: #D28957;
-    width:10%;
+.imgabout2 button{
     height:3rem;
-    position: relative;
-    bottom:12rem;
-    color:white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px; 
-    top:25rem;  
-    right:26rem;
+    width:8%;
+    background-color: #D28957; 
+    margin-top:25%;
 }
 
-#imgabout3 img{
-    padding-top: 10rem;
-    width:40%;
-    margin-top: 4rem;
-    margin-left:5rem;
-    border-radius:90px 50px 50px 50px ;
-}
-
-#imgabout3 p{
-    color:black;
-    font-family: 'Roboto', sans-serif;
-    font-size: 37px;
-    position:relative;
-    width:40%;
-    left: 55rem;
-    top:33rem;
-}
-
-#imgabout3 button{
-    background-color: #D28957;
-    position: relative;
-    width:10%;
-    height:3rem;
-    left:14rem;
-    bottom:12rem;
-    color:white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-}
-
-
+/* Footer part*/
 #final{
     color:#879F84;
     text-align: center;
@@ -262,8 +220,6 @@ nav{
 
 
 
-
-
 /* Question section*/
 #questionBox{
    background-color: #059Dc0;
@@ -300,76 +256,27 @@ nav{
 }
 
 
-
-
-
-
-
-
 /* Workout */
 .workoutBox{
-  display:grid;
-  grid-template-columns: repeat(2, 60rem);
-  margin-left:15rem;
+    display: grid;
+    grid-template-columns: repeat(2,50rem);
+    margin-left: 20rem;
 }
 
-.pictureBox {
- margin-top:7rem;
-  }
-
-.workoutPictures{
-
+.workoutBox .pictureBox{
+    float: left;
+}
+.workoutBox .pictureBox .workoutPictures{
+    margin: 1.5rem;
+}
+.workoutBox .wordBox{
+  width: 30rem;
+  margin: 2rem;
 }
 
-.wordBox{
+.workoutBox .wordBox button{
+    margin-bottom: 20rem;
 }
-  
-.title {
-    font-size: 30px;
-    width: 30%;
-    
-  }
-   
-#bookButton{
-   width:8%;
-  }
-
-  .members{
-   
-  }
-
-  /*@media (max-width: 1500px) {
-    .workoutPictures {
-      width: 50%;
-      padding-top: 1rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  
-    .title {
-      width: 30%;
-      position: relative;
-      font-size: 1.5rem;
-      bottom: 30rem;
-      left: 44rem;
-      float: none;
-    }
-    .members{
-        padding-left: 10rem;
-    }
-  }*/
-  
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -378,7 +285,7 @@ nav{
     display: grid;
     grid-template-columns: repeat(3, 30rem);
     grid-gap: 1px;
-    padding-left:20rem;
+    padding-left:9.5rem;
     padding-top: 10rem;
   }
   
