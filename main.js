@@ -2,6 +2,7 @@ const detailsContainer = document.getElementById("details");
 const workoutButton = document.getElementById('workoutButton');
 let socials = document.getElementById("socials")
 
+//fetch workout information
 fetch('http://localhost:3000/items')
   .then(response => response.json())
   .then(data => 
@@ -14,7 +15,7 @@ fetch('http://localhost:3000/items')
     })
 })
   
-//Home Button  
+//Home Button  actions
 const homeButton = document.getElementById('homeButton');
 homeButton.addEventListener('click', () => {
   handleHomeButtonClick();
@@ -97,7 +98,7 @@ questionButton.addEventListener('click', () => {
   handleQuestionButtonClick()
 });
 
-
+// function for details that appear on the question home
 function handleQuestionButtonClick() {
     socials.innerHTML=""
     detailsContainer.innerHTML=""
@@ -117,6 +118,8 @@ function handleQuestionButtonClick() {
 questionSubmit()
 }
  
+
+// fuction for submiting the form
 function questionSubmit() {
     let form = document.getElementById("form");
     form.addEventListener("submit", (event) => {
@@ -156,10 +159,7 @@ const nutriButton = document.getElementById("nutriButton")
 })
 
  
-
-
-
-
+//function that displays page items
   function handleNutritionButtonClick(info) {
         detailsContainer.innerHTML = "";
         detailsContainer.removeAttribute("class")
@@ -175,8 +175,11 @@ const nutriButton = document.getElementById("nutriButton")
       };
          search(foodCard)
       }
-
-    function formSearch(){
+      
+      
+      
+  //Function that displays search button  
+  function formSearch(){
         let searchFood =document.createElement("form")
          searchFood.innerHTML =`
         <input id="searchFood" class="search" type="text">
