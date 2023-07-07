@@ -317,7 +317,7 @@
   "questions": [
     {
       "id": "1",
-      "questionText": "When should i eat a heavy meal",
+      "quiz": "When should i eat a heavy meal",
       "email": "marywanjiru@gmail.com"
     },
     {
