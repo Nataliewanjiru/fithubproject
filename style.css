@@ -286,7 +286,7 @@ nav{
     grid-template-columns: repeat(3, 30rem);
     grid-gap: 1px;
     padding-left:9.5rem;
-    padding-top: 10rem;
+    padding-top: 6rem;
   }
   
   .card {
@@ -294,11 +294,14 @@ nav{
     border-radius: 5px;
     padding: 20px;
     width:60%;
+    margin-top:10rem;
   }
 
-  #foodBox h1{
+ #foodBox h1{
       font-family: 'Roboto', sans-serif; 
       color: #D28957;
+      height:5rem;
       font-size: 50px;
   }
+  
   
