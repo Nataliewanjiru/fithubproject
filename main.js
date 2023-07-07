@@ -6,6 +6,9 @@ fetch('http://localhost:3000/items')
   .then(response => response.json())
   .then(data => 
     { 
+  document.getElementById("workoutSite").addEventListener("click",()=>{
+        handleWorkoutButton(data)})
+    
   workoutButton.addEventListener('click', ()=>{
         handleWorkoutButton(data)
     })
@@ -24,9 +27,15 @@ function handleHomeButtonClick() {
 
 
 // Display workPage
+
+function form(){
+  
+}
 function handleWorkoutButton(info){
-    
-    detailsContainer.innerText=""
+
+    socials.innerHTML=" "
+    detailsContainer.innerHTML=""
+    detailsContainer.removeAttribute("id")
     detailsContainer.className ="workoutBox"
 
     let wordBox = document.createElement('div')
@@ -57,7 +66,6 @@ function handleWorkoutButton(info){
      detailsContainer.append(pictureBox,wordBox)
      
   }
-
 }
 
 
@@ -92,9 +100,11 @@ questionButton.addEventListener('click', () => {
   handleQuestionButtonClick()
 });
 
+
 function handleQuestionButtonClick() {
     socials.innerHTML=""
-    detailsContainer.innerText=""
+    detailsContainer.innerHTML=""
+    detailsContainer.removeAttribute("class")
     detailsContainer.id="questionBox" 
     detailsContainer.innerHTML=`
     <h1> DO YOU HAVE ANY QUESTIONS ? </h1>
@@ -138,13 +148,18 @@ const nutriButton = document.getElementById("nutriButton")
 
   fetch('http://localhost:3000/food')
 .then(response=>response.json())
-.then(data=>
+.then(data=>{
+  document.getElementById("nutriSite").addEventListener("click",()=>{
+    handleNutritionButtonClick(data)
+  })
      handleNutritionButtonClick(data)
-  )
+})
 
-    function handleNutritionButtonClick(info) {
+ 
+  function handleNutritionButtonClick(info) {
       nutriButton.addEventListener("click", () => {
         detailsContainer.innerHTML = "";
+        detailsContainer.removeAttribute("class")
         detailsContainer.id ="foodBox"
         socials.innerHTML="";
         
@@ -171,3 +186,5 @@ const nutriButton = document.getElementById("nutriButton")
       });
     }
     
+
+   
