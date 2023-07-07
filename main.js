@@ -28,9 +28,6 @@ function handleHomeButtonClick() {
 
 // Display workPage
 
-function form(){
-  
-}
 function handleWorkoutButton(info){
 
     socials.innerHTML=" "
@@ -152,39 +149,79 @@ const nutriButton = document.getElementById("nutriButton")
   document.getElementById("nutriSite").addEventListener("click",()=>{
     handleNutritionButtonClick(data)
   })
-     handleNutritionButtonClick(data)
+  nutriButton.addEventListener("click",()=>{
+    handleNutritionButtonClick(data)
+  })
+     
 })
 
  
+
+
+
+
   function handleNutritionButtonClick(info) {
-      nutriButton.addEventListener("click", () => {
         detailsContainer.innerHTML = "";
         detailsContainer.removeAttribute("class")
         detailsContainer.id ="foodBox"
         socials.innerHTML="";
-        
-        let h1 =document.createElement("h1")
-         h1.innerText="Feel Free To find your Portions"
-         detailsContainer.append(h1)
-        
-         for (let i = 0; i < info.length; i++) {
-          const food = info[i];
-          const foodCard = document.createElement("div");
-          foodCard.className = "card";
-          
-          foodCard.innerHTML = `
-            <h5>${food.name}</h5>
-            <p>Calories: ${food.nutrients.calories}</p>
-            <p>Carbohydrates: ${food.nutrients.carbohydrates}</p>
-            <p>Protein: ${food.nutrients.protein}</p>
-            <p>Fat: ${food.nutrients.fat}</p>
-            <p>Fiber: ${food.nutrients.fiber}</p>
-            <img src="${food.image}" alt="${food.name}" width="200">
-          `;
+          formSearch()
+ 
+      for (let i = 0; i < info.length; i++) {
+          var food = info[i];
+          var foodCard = document.createElement("div");
+           foodCard.className = "card";
+          card(foodCard,food)             
+      };
+         search(foodCard)
+      }
+
+    function formSearch(){
+        let searchFood =document.createElement("form")
+         searchFood.innerHTML =`
+        <input id="searchFood" class="search" type="text">
+       <button id="foodButton" class="search" >Search</button>`
+       detailsContainer.append(searchFood)
+
+      }
+
+//funtion for displaying the cards
+ function card(foodCard,food){
+    foodCard.innerHTML = `
+     <h5>${food.name}</h5>
+      <p>Calories: ${food.nutrients.calories}</p>
+       <p>Carbohydrates: ${food.nutrients.carbohydrates}</p>
+       <p>Protein: ${food.nutrients.protein}</p>
+       <p>Fat: ${food.nutrients.fat}</p>
+       <p>Fiber: ${food.nutrients.fiber}</p>
+       <img src="${food.image}" alt="${food.name}" width="200">
+       `;
           detailsContainer.appendChild(foodCard);
-        }
-      });
     }
     
 
-   
+  // Function for searching  
+  function search(foodCard) {
+    let button = document.getElementById("foodButton");
+    button.addEventListener("click", function(event) {
+      event.preventDefault();
+      let input = document.getElementById("searchFood").value;
+      fetch(`http://localhost:3000/food`)
+        .then(response => response.json())
+        .then(data => {
+          let found = false;
+          for (let i = 0; i < data.length; i++) {
+            if (input === data[i].name) {
+              detailsContainer.innerHTML = "";
+              formSearch();
+              console.log(data[i].nutrients);
+              card(foodCard, data[i]);
+              found = true;
+            }
+          }
+          if (!found) {
+            handleNutritionButtonClick(data);
+          }
+        });
+    });
+  }
