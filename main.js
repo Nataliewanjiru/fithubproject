@@ -140,7 +140,7 @@ const nutriButton = document.getElementById("nutriButton")
 .then(response=>response.json())
 .then(data=>
      handleNutritionButtonClick(data)
-    )
+  )
 
     function handleNutritionButtonClick(info) {
       nutriButton.addEventListener("click", () => {
