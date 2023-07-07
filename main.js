@@ -27,26 +27,37 @@ function handleHomeButtonClick() {
 function handleWorkoutButton(info){
     
     detailsContainer.innerText=""
-    detailsContainer.id ="workoutBox"
+    detailsContainer.className ="workoutBox"
+
+    let wordBox = document.createElement('div')
+    wordBox.className = "wordBox"
+    let pictureBox = document.createElement("div")
+    pictureBox.className = "pictureBox"
    
     for (let i = 0; i < info.length; i++) {
     let activity=info[i].bestThumbnail.url
      let imgElement = document.createElement("img");
      imgElement.src = activity;
      imgElement.className="workoutPictures"
+     pictureBox.append(imgElement)
 
      let h2 = document.createElement("h2")
      h2.textContent=`${info[i].title}`
      h2.className="title" 
+
      
      let p = document.createElement("p")
      p.innerHTML=`Member attending: ${info[i].attending}`
      p.className="members"
  
      const button =update(info,i,p);
+
+     wordBox.append(h2,p,button)
      
-     detailsContainer.append(imgElement,h2,p,button);
+     detailsContainer.append(pictureBox,wordBox)
+     
   }
+
 }
 
 
