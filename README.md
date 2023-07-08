@@ -12,7 +12,7 @@ This website is used for booking workout sessions and also gives information on 
 
 # To execute project
 - You can clone the project
-- Make sure to start the live server
+- Make sure to run the json file using json-server --watch db.json
 - Review codees by executing on browser
 
 
