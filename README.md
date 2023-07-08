@@ -12,6 +12,7 @@ This website is used for booking workout sessions and also gives information on 
 
 # To execute project
 - You can clone the project
+- Make sure to start the live server
 - Review codees by executing on browser
 
 
