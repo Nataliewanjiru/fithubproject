@@ -3,7 +3,7 @@ const workoutButton = document.getElementById('workoutButton');
 let socials = document.getElementById("socials")
 
 //fetch workout information
-fetch('http://localhost:3000/items')
+fetch('https://fithub-project.onrender.com/items')
   .then(response => response.json())
   .then(data => 
     { 
@@ -78,7 +78,7 @@ function update(info, i, p) {
       p.innerHTML = `Members attending: ${info[i].attending}`;
       button.innerHTML = "Booked";
   
-      fetch(`http://localhost:3000/items/${id}`, {
+      fetch(`https://fithub-project.onrender.com/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json"
@@ -126,7 +126,7 @@ function questionSubmit() {
       event.preventDefault();
       let quiz = document.getElementById("question").value
       let email =document.getElementById("email").value
-      fetch(`http://localhost:3000/questions`, {
+      fetch(`https://fithub-project.onrender.com/questions`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -146,7 +146,7 @@ function questionSubmit() {
 
 const nutriButton = document.getElementById("nutriButton")
 
-  fetch('http://localhost:3000/food')
+  fetch('https://fithub-project.onrender.com/food')
 .then(response=>response.json())
 .then(data=>{
   document.getElementById("nutriSite").addEventListener("click",()=>{
@@ -209,7 +209,7 @@ const nutriButton = document.getElementById("nutriButton")
     button.addEventListener("click", function(event) {
       event.preventDefault();
       let input = document.getElementById("searchFood").value;
-      fetch(`http://localhost:3000/food`)
+      fetch(`https://fithub-project.onrender.com/food`)
         .then(response => response.json())
         .then(data => {
           let found = false;
